@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: crimson;
+    font-size: 10rem;
+    text-transform: uppercase;
+}
+
+.main-header {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header {
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: grid;
+    place-items: center;
+}
+
+.center-div {
+    width: 10rem;
+    height: 10rem;
+    background-color: #ee5253;
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7 5.3 rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.58) 0 6.7 5.3 rgba(0, 0, 0, 0.048);
+    animation: hbeat 1s linear infinite;
+}
+
+.center-div::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #ee5253;
+    position: absolute;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.center-div::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #ee5253;
+    position: absolute;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+@keyframes hbeat {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    20% {
+        transform: rotate(45deg) scale(1);
+    }
+    40% {
+        transform: rotate(45deg) scale(1.4);
+    }
+    60% {
+        transform: rotate(45deg) scale(1.2);
+    }
+    80% {
+        transform: rotate(45deg) scale(1.4);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
